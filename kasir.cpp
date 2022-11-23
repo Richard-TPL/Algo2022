@@ -10,7 +10,9 @@ struct kasir {
 void menu () {
 	float tot, total;
 	kasir kas;
-	system ("cls");
+	cout << "selamat datang ke toko gatotkaca" << endl;
+	cout << "ini list item kita" << endl;
+	cout << "------------------------------------" << endl;
 	cout << "|1. indomie		|" << endl;
 	cout << "|2. pasta gigi		|" << endl;
 	cout << "|3. buku		|" << endl;
@@ -19,6 +21,7 @@ void menu () {
 	cout << "|6. pena		|" << endl;
 	cout << "|7. spidol		|" << endl;
 	cout << "|8. susu		|" << endl;
+	cout << "------------------------------------" << endl;
 	for (int i=0; i<8;i++){
 	cout << "Silakan input item yang kalian beli: "; cin >> kas.pil[i];
 	if (kas.pil[i] == 1) {
@@ -47,23 +50,22 @@ void menu () {
 	if (kas.choice == 'y') {
 		continue;
 	} else {
-		
+		system ("cls");
 		cout << "total yang harus dibayar adalah Rp. " << tot << endl;
 		cout << "pembayaran anda? " ; cin >> kas.cost;
 		total = kas.cost-tot;
 		if (kas.cost > tot) {
-			cout << "kembalian anda adalah Rp. " << total;
+			cout << "kembalian anda adalah Rp. " << total << endl;
 		} else {
-			cout << "tidak ada kembalian";
+			cout << "tidak ada kembalian" << endl;
 		}
 		break;
 	}	
-}
+	}
 }
 	
 int main () {
 		kasir kas;
-		menu ();		
+		menu ();
+		cout << "Terima kasih telah belanja disini"	<< endl;
 }
-
-
